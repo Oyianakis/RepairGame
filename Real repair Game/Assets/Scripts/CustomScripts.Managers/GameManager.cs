@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
+
 namespace CustomScripts.Managers
 {
     public class GameManager : MonoBehaviour
@@ -21,5 +22,6 @@ namespace CustomScripts.Managers
 
             Instance = this;
         }
+
     }
 }
