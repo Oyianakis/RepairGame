@@ -293,6 +293,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586210808227714341
     List: []
-  ExpandedItems: []
-  autoPopulateEnabled: 1
+  ExpandedItems:
+  - /GlobalGameJam2020
+  - /GlobalGameJam2020/SoundBanks
+  - /GlobalGameJam2020/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 0
   CurrentPluginConfig: 
