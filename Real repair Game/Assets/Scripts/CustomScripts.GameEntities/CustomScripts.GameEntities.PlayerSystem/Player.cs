@@ -33,7 +33,7 @@ namespace CustomScripts.GameEntities.PlayerSystem
             var node = Ground.Instance.FromWorldToNode(transform.position);
             if (node.Tile.Marked)
                 return;
-            node.Tile.Mark();
+            node.Tile.MarkColor();
         }
 
         private void TurnTile()
