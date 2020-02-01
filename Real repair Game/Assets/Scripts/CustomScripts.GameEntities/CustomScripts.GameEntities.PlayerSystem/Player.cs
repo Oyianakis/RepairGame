@@ -23,12 +23,8 @@ namespace CustomScripts.GameEntities.PlayerSystem
 
         public void CheckPlayerBehavior()
         {
-            if (Input.GetButtonDown($"Mark Right {this.playerID}"))
+            if (Input.GetButtonDown($"Mark {this.playerID}"))
                 MarkTile();
-            else if (Input.GetButtonDown($"Mark Left {this.playerID}"))
-                MarkTile(); // it's just a filler, for the time being
-            else if (Input.GetButtonDown($"Mark Straight {this.playerID}"))
-                MarkTile(); // same for this one
         }
 
         private void MarkTile()
@@ -36,7 +32,8 @@ namespace CustomScripts.GameEntities.PlayerSystem
             var node = Ground.Instance.FromWorldToNode(transform.position);
             if (node.Tile.Marked)
                 return;
-            node.Tile.Mark();
+            node.Tile.MarkColor();
+            node.ChangeDirection();
         }
     }
 }

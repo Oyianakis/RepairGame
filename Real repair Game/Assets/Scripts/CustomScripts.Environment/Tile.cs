@@ -19,7 +19,7 @@ namespace CustomScripts.Environment
             this.material = GetComponent<Renderer>().material;
         }
 
-        public void Mark()
+        public void MarkColor()
         {
             this.material.color = markerColor;      
         }
