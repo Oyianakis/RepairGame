@@ -31,7 +31,11 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 17248ad42d720947b0b91f4c7e94cdc4
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8586210665968773853
+=======
+    m_lastTime: -8586210660860158735
+>>>>>>> 8d7935081864be145f5d849e6742541fcdc00715
     List:
     - name: Main
       guid: 644752ad698d9f4092486f62ec0f767f
@@ -47,7 +51,11 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 179f36ea6d9cd040b1fadbaa87737e40
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8586210665968873799
+=======
+    m_lastTime: -8586210660860039313
+>>>>>>> 8d7935081864be145f5d849e6742541fcdc00715
     List:
     - name: Ambience
       guid: 140066065deac64b9f61928966f75baa
@@ -297,5 +305,5 @@ MonoBehaviour:
   - /GlobalGameJam2020
   - /GlobalGameJam2020/SoundBanks
   - /GlobalGameJam2020/SoundBanks/Default Work Unit
-  autoPopulateEnabled: 0
+  autoPopulateEnabled: 1
   CurrentPluginConfig: 

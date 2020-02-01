@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{D7A76C69-FEC1-49A9-9363-4EA009A80481}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\rh_mk\Desktop\GlobalGameJam2020\Bounced"/>
 				<Property Name="Event Action List\{06660014-EA5D-4BC6-9F61-928966F75BAA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1F679B49-9E74-43B8-A33F-0F2D42C0B328}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{88E60AA5-8AB3-4DDE-BFFA-A917FF7764BC}\x64_Expand States" Type="string" Value=""/>
@@ -29,6 +30,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="C/qwEvnXkUOfsjHyrgZvJQ=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="ZEdSrWmNn0CSSG9i7A92fw=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
+				<Property Name="Interactive Music\x64_{7F9A21CE-47A4-40BA-A49A-560D1856C0E4} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP2ooH4eNSy1AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="LoudnessMeterView\LastObject2" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
@@ -40,6 +42,8 @@
 				<Property Name="MonitoringManager\WatchMgr\WatchesVersion" Type="int32" Value="7"/>
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
+				<Property Name="Music Transition List\{72F819D5-A46B-4AEC-AA7A-6408C0EF31E3}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{E16CFEC2-3691-4E8E-80A4-8DDEC15EDC6B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>

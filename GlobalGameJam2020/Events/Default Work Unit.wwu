@@ -10,7 +10,17 @@
 				<Event Name="Repair" ID="{1F679B49-9E74-43B8-A33F-0F2D42C0B328}"/>
 				<Event Name="Brick" ID="{C2AD4709-229E-4E6C-A521-C47957B6AAB3}"/>
 				<Event Name="Explosion" ID="{F68445D4-94B3-4B59-AE1E-10CC90D2848E}"/>
-				<Event Name="Music" ID="{CA6FE74C-0834-4917-987D-3CC707FAD1C5}"/>
+				<Event Name="Music" ID="{CA6FE74C-0834-4917-987D-3CC707FAD1C5}">
+					<ChildrenList>
+						<Action Name="" ID="{ECED2EB5-4C46-413E-8FD2-F20B312D9155}" ShortID="1062701065">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{E16CFEC2-3691-4E8E-80A4-8DDEC15EDC6B}" WorkUnitID="{E2851F16-56AD-4E2F-A809-E6219F52B91D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
