@@ -16,11 +16,11 @@ namespace CustomScripts.Environment
 
         private void Awake()
         {
-			this.markerColor = Color.green;
-			this.material = GetComponent<Renderer>().material;
-		}
+            this.markerColor = Color.green;
+            this.material = GetComponent<Renderer>().material;
+        }
 
-		public void Mark()
+        public void MarkColor()
         {
             //Should probably change how to compare these nodes, possibly when we get more node data?
             if (this.GetComponent<Renderer>().material.color != changedMat.color)
@@ -28,12 +28,14 @@ namespace CustomScripts.Environment
                 this.material.color = markerColor;
                 this.GetComponent<Renderer>().material = changedMat;
             }
-			else
-			{
+            else
+            {
                 Debug.Log("Already done!!");
                 this.transform.Rotate(0, 0, -90);
-			}
+            }
         }
 
     }
+
+}
 }
