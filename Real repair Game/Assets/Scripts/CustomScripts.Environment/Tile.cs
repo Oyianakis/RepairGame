@@ -23,5 +23,6 @@ namespace CustomScripts.Environment
         {
             this.material.color = markerColor;      
         }
+
     }
 }
