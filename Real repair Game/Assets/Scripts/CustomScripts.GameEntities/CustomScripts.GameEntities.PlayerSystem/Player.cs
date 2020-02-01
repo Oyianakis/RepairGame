@@ -23,12 +23,9 @@ namespace CustomScripts.GameEntities.PlayerSystem
 
         public void CheckPlayerBehavior()
         {
-            if (Input.GetButtonDown($"Mark Right {this.playerID}"))
+            if (Input.GetButtonDown($"Mark {this.playerID}"))
                 MarkTile();
-            else if (Input.GetButtonDown($"Mark Left {this.playerID}"))
-                MarkTile(); // it's just a filler, for the time being
-            else if (Input.GetButtonDown($"Mark Straight {this.playerID}"))
-                MarkTile(); // same for this one
+            
         }
 
         private void MarkTile()
@@ -38,5 +35,10 @@ namespace CustomScripts.GameEntities.PlayerSystem
                 return;
             node.Tile.Mark();
         }
+
+        private void TurnTile()
+		{
+            return;
+		}
     }
 }
