@@ -2,9 +2,10 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
+
+Real repair Game/Library/
+Real repair Game/Temp/
+Real repair Game/obj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
@@ -57,4 +58,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
 
