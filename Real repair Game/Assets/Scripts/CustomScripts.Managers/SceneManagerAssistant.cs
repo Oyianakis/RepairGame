@@ -23,9 +23,9 @@ namespace CustomScripts.Managers
             Instance = this;
         }
 
-        public void StartGame()
+        public void StartGame(string sceneToLoad)
         {
-            SceneManager.LoadScene("Scene 1");
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
