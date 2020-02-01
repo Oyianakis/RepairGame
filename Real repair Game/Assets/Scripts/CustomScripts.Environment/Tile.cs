@@ -12,6 +12,7 @@ namespace CustomScripts.Environment
         public bool Marked { get; set; }
         private Color markerColor;
         private Material material;
+        [SerializeField] private Material changedMat;
 
         private void Awake()
         {
@@ -21,8 +22,20 @@ namespace CustomScripts.Environment
 
         public void MarkColor()
         {
-            this.material.color = markerColor;      
+            //Should probably change how to compare these nodes, possibly when we get more node data?
+            if (this.GetComponent<Renderer>().material.color != changedMat.color)
+            {
+                this.material.color = markerColor;
+                this.GetComponent<Renderer>().material = changedMat;
+            }
+            else
+            {
+                Debug.Log("Already done!!");
+                this.transform.Rotate(0, 0, -90);
+            }
         }
 
     }
+
 }
+

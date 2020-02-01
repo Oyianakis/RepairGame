@@ -25,6 +25,7 @@ namespace CustomScripts.GameEntities.PlayerSystem
         {
             if (Input.GetButtonDown($"Mark {this.playerID}"))
                 MarkTile();
+            
         }
 
         private void MarkTile()
@@ -33,7 +34,11 @@ namespace CustomScripts.GameEntities.PlayerSystem
             if (node.Tile.Marked)
                 return;
             node.Tile.MarkColor();
-            node.ChangeDirection();
         }
+
+        private void TurnTile()
+		{
+            return;
+		}
     }
 }
