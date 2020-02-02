@@ -55,9 +55,9 @@ namespace CustomScripts.Environment
 	     // Are you loading?
              // Debug.Log("Loading this scene: " + SceneManager.GetActiveScene().name);
    	     // Forcing some nodes to be obstacles
-             this.grid[13,10].TileType = TileType.OBSTACLE;
-	     this.grid[12,10].TileType = TileType.OBSTACLE;
-   	     this.grid[11,10].TileType = TileType.OBSTACLE;
+      //       this.grid[13,10].TileType = TileType.OBSTACLE;
+	     //this.grid[12,10].TileType = TileType.OBSTACLE;
+   	  //   this.grid[11,10].TileType = TileType.OBSTACLE;
              }
         }
 
@@ -97,7 +97,8 @@ namespace CustomScripts.Environment
         public Tile Tile { get; set; }
         public Direction TurnTo { get; private set; }
         private Queue<Direction> directionQueue;
-	public TileType TileType { get; set; }
+        public bool IsMarked { get => this.TurnTo != Direction.NONE; }
+    	public TileType TileType { get; set; }
 
         public Node(int xCoord, int yCoord, Tile tile, Direction turnDirection = Direction.NONE, TileType tileType = TileType.NONE)
         {
@@ -105,9 +106,14 @@ namespace CustomScripts.Environment
             this.yCoord = yCoord;
             this.TurnTo = turnDirection;
             this.Tile = tile;
-	    this.TileType = tileType;
-
+	        this.TileType = tileType;
             this.directionQueue = new Queue<Direction>();
+
+            this.ResetQueue();
+        }
+
+        private void ResetQueue()
+        {
             var directions = Enum.GetValues(typeof(Direction))
                 .OfType<Direction>()
                 .Where(d => d != Direction.NONE);
@@ -120,9 +126,15 @@ namespace CustomScripts.Environment
             var dir = this.directionQueue.Dequeue();
             this.TurnTo = dir;
             this.directionQueue.Enqueue(dir);
-            //for test purpose
-            Debug.Log(this.TurnTo);
         }
+
+        public void RemoveSign()
+        {
+            this.Tile.Demark();
+            this.TurnTo = Direction.NONE;
+            this.ResetQueue();
+        }
+
     }
 
     public static class NodeExtensions
