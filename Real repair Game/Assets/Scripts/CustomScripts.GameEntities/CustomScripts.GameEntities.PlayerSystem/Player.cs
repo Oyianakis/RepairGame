@@ -19,17 +19,30 @@ namespace CustomScripts.GameEntities.PlayerSystem
         public void CheckPlayerBehavior()
         {
             if (Input.GetButtonDown($"Mark {this.playerID}"))
-                MarkTile();
-            
+                this.MarkTile();
+            if (Input.GetButtonDown($"Remove {this.playerID}"))
+                this.RemoveTile();
         }
 
         private void MarkTile()
         {
             var node = Ground.Instance.FromWorldToNode(transform.position);
-            if (node.Tile.Marked)
-                return;
-            node.Tile.MarkColor();
-            node.ChangeDirection();
+            if (node.IsMarked) {
+                node.Tile.Rotate();
+                node.ChangeDirection();
+            }
+            else {
+                node.Tile.MarkArrow();
+                node.ChangeDirection();
+            }
+        }
+
+        private void RemoveTile()
+        {
+            Debug.Log("remove");
+            var node = Ground.Instance.FromWorldToNode(transform.position);
+            if (node.IsMarked)
+                node.RemoveSign();                
         }
     }
 }

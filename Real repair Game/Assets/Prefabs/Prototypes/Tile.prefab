@@ -108,3 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changedMat: {fileID: 2100000, guid: 2c2fc7601b911438cbdc595c4d10f1dd, type: 2}
+  default_material: {fileID: 2100000, guid: 461b92d2f27a244dda57596c85cea147, type: 2}

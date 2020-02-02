@@ -13,6 +13,7 @@ namespace CustomScripts.Environment
         private Color markerColor;
         private Material material;
         [SerializeField] private Material changedMat;
+        [SerializeField] private Material default_material;
 
         private void Awake()
         {
@@ -20,7 +21,7 @@ namespace CustomScripts.Environment
             this.material = GetComponent<Renderer>().material;
         }
 
-        public void MarkColor()
+        public void MarkArrow()
         {
             //Should probably change how to compare these nodes, possibly when we get more node data?
             if (this.GetComponent<Renderer>().material.color != changedMat.color)
@@ -28,10 +29,16 @@ namespace CustomScripts.Environment
                 this.material.color = markerColor;
                 this.GetComponent<Renderer>().material = changedMat;
             }
-            else
-            {
-                this.transform.Rotate(0, 0, -90);
-            }
+        }
+
+        public void Rotate()
+        {
+            this.transform.Rotate(0, 0, -90);
+        }
+
+        public void Demark()
+        {
+            this.GetComponent<Renderer>().material = this.default_material;
         }
 
     }
