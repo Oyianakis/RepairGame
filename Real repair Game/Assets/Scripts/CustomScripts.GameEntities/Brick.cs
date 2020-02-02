@@ -21,12 +21,13 @@ namespace CustomScripts.GameEntities
 
         private void Start()
         {
-            UpdateManager.Instance.GlobalUpdate += this.Move;
+            UpdateManager.Instance.GlobalFixedUpdate += this.Move;
             this.currentDirection = Direction.FORWARD;
         }
 
         public bool IsImmnueToSpawner { get; set; }
-        private void Move()
+        //public bool IsEdgeImmune { get; set; }
+        public void Move()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
 	    
@@ -51,9 +52,13 @@ namespace CustomScripts.GameEntities
             {
                 var isAtCenter = CanReactToDirection();
                 var isDeadEnd = Ground.Instance.ReachedDeadEnd(this.currentNode);
+                //var isEdgeImmune = isDeadEnd &&                 
                 var isSpawnNode = Spawner.spawnNodes.Contains(this.currentNode);
 
-                var checkDeadEndSucceed = isAtCenter && isDeadEnd && (!isSpawnNode || this.IsImmnueToSpawner);
+                var checkDeadEndSucceed = /*!this.currentNode.IsAssignedSign() && */
+                    isAtCenter && 
+                    isDeadEnd && 
+                    (!isSpawnNode || this.IsImmnueToSpawner);
                 if (checkDeadEndSucceed)
                     this.ReverseDirection();
 
