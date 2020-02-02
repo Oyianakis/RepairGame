@@ -16,6 +16,21 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace GAMESTATUS
+        {
+            static const AkUniqueID GROUP = 1045871717U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace STATE
+        } // namespace GAMESTATUS
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
