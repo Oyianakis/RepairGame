@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +33,11 @@ namespace CustomScripts.GameEntities
             void DetectNodeAndAct()
             {
                 this.currentNode = Ground.Instance.FromWorldToNode(transform.position);
+		
+		// Is this a special node?
+		var specialNode = 
+
+		// If there's no direction, nothing to do.
                 if (this.currentNode.TurnTo == Direction.None)
                     return;
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   PlatformSettingsList: []
   InvalidReferencePlatforms: []
   UserSettings:
-    m_BasePath: Audio\GeneratedSoundBanks
+    m_BasePath: Audio/GeneratedSoundBanks
     m_StartupLanguage: English(US)
     m_PreparePoolSize: 0
     m_CallbackManagerBufferSize: 4096

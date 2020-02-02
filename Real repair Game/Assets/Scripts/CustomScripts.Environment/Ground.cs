@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,12 +65,19 @@ namespace CustomScripts.Environment
     }
 
     public enum Direction { None, Right, Back, Left, Straight }
+    public enum TileType { NONE, EMPTY, TILE, OBJECTIVE, OBSTACLE }
+
     public class Node
     {
+	// Location
         public int xCoord { get; }
         public int yCoord { get; }
+
+	// Center of Node. 0.0 is bottom left of grid. Each grid side is 1f in length.
         public Vector3 Center { get => new Vector3(xCoord + 0.5f, 0, yCoord + 0.5f); }
         public Tile Tile { get; set; }
+
+	// Set this and bricks will turn upon reaching this spot
         public Direction TurnTo { get; private set; }
         private Queue<Direction> directionQueue;
 
@@ -94,7 +101,8 @@ namespace CustomScripts.Environment
             var dir = this.directionQueue.Dequeue();
             this.TurnTo = dir;
             this.directionQueue.Enqueue(dir);
-            //for test purpose
+            
+	    //for test purpose
             Debug.Log(this.TurnTo);
         }
     }
