@@ -29,7 +29,19 @@ namespace CustomScripts.GameEntities
         private void Move()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
+	    
+	    //Get CurrentNode
             this.currentNode = Ground.Instance.FromWorldToNode(transform.position);
+
+	    if (this.currentNode.TileType == TileType.OBSTACLE) 
+	    {
+ 	      this.ReverseDirection();
+            }
+
+	    if (this.currentNode.TileType == TileType.OBJECTIVE)
+	    {
+		//SCORE POINTS
+	    }
 
             if (CheckDeadEnd())
                 return;

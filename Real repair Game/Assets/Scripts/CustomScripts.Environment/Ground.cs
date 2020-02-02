@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using CustomScripts.Fundamentals;
 using CustomScripts.Managers;
 
@@ -13,7 +14,7 @@ namespace CustomScripts.Environment
     {
         [SerializeField] private Vector2 mapSize;
         [SerializeField] private GameObject tilePrefab;
-        public Node[,] grid;
+        	         public Node[,] grid;
 
         public static Ground Instance { get; private set; }
         private void Awake()
@@ -51,6 +52,12 @@ namespace CustomScripts.Environment
                         this.grid[i, j] = new Node(i, j, tile.GetComponent<Tile>());
                     }
                 }
+	     // Are you loading?
+             // Debug.Log("Loading this scene: " + SceneManager.GetActiveScene().name);
+   	     // Forcing some nodes to be obstacles
+             this.grid[13,10].TileType = TileType.OBSTACLE;
+	     this.grid[12,10].TileType = TileType.OBSTACLE;
+   	     this.grid[11,10].TileType = TileType.OBSTACLE;
              }
         }
 
@@ -81,7 +88,7 @@ namespace CustomScripts.Environment
     }
 
     public enum Direction { NONE, RIGHT, BACK, LEFT, FORWARD }
-    public enum TileType { NONE, EMPTY, TILE, OBSTACLE, OBJECTIVE } 
+    public enum TileType { NONE, OBSTACLE, OBJECTIVE } 
     public class Node
     {
         public int xCoord { get; }
@@ -90,13 +97,15 @@ namespace CustomScripts.Environment
         public Tile Tile { get; set; }
         public Direction TurnTo { get; private set; }
         private Queue<Direction> directionQueue;
+	public TileType TileType { get; set; }
 
-        public Node(int xCoord, int yCoord, Tile tile, Direction turnDirection = Direction.NONE)
+        public Node(int xCoord, int yCoord, Tile tile, Direction turnDirection = Direction.NONE, TileType tileType = TileType.NONE)
         {
             this.xCoord = xCoord;
             this.yCoord = yCoord;
             this.TurnTo = turnDirection;
             this.Tile = tile;
+	    this.TileType = tileType;
 
             this.directionQueue = new Queue<Direction>();
             var directions = Enum.GetValues(typeof(Direction))
