@@ -18,6 +18,13 @@ namespace CustomScripts.GameEntities
             Spawner.spawnNodes.Add(spawnNode);
         }
 
+        private void OnTriggerExit(Collider other)
+        {
+            var brick = other.GetComponent<Brick>();
+            if (brick)
+                brick.IsImmnueToSpawner = true;
+        }
+
         public IEnumerator Spawn()
         {
             var rotation = Quaternion.LookRotation(transform.forward);

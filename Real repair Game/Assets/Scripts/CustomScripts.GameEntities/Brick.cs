@@ -25,6 +25,7 @@ namespace CustomScripts.GameEntities
             this.currentDirection = Direction.forward;
         }
 
+        public bool IsImmnueToSpawner { get; set; }
         private void Move()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -40,7 +41,7 @@ namespace CustomScripts.GameEntities
                 var isDeadEnd = Ground.Instance.ReachedDeadEnd(this.currentNode);
                 var isSpawnNode = Spawner.spawnNodes.Contains(this.currentNode);
 
-                var checkDeadEndSucceed = isAtCenter && isDeadEnd && !isSpawnNode;
+                var checkDeadEndSucceed = isAtCenter && isDeadEnd && (!isSpawnNode || this.IsImmnueToSpawner);
                 if (checkDeadEndSucceed)
                     this.ReverseDirection();
 
