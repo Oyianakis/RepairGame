@@ -33,21 +33,17 @@ namespace CustomScripts.GameEntities
             void DetectNodeAndAct()
             {
                 this.currentNode = Ground.Instance.FromWorldToNode(transform.position);
-                Debug.Log($"{currentDirection}, {currentNode.TurnTo}");
                 if (this.currentNode.TurnTo == Direction.None)
                     return;
 
                 var atCenterOfANode = CanReactToDirection();
                 if (!atCenterOfANode)
                     return;
-                Debug.Log("at Center check");
 
-                Debug.Log($"Current Dir: {currentDirection}\nNode TUrnto: {currentNode.TurnTo}");
-                Debug.Log(this.currentDirection != this.currentNode.TurnTo);
                 if (this.currentDirection != this.currentNode.TurnTo) {
-                    Debug.Log("turn check");
                     var lookVector = this.FromDirectionToVector3(this.currentNode.TurnTo);
                     transform.rotation = Quaternion.LookRotation(lookVector);
+                    this.currentDirection = this.currentNode.TurnTo;
                 }
             }
         
