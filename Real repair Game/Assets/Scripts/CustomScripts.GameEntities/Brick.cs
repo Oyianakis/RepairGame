@@ -16,6 +16,8 @@ namespace CustomScripts.GameEntities
         [SerializeField] private float speed;
         [SerializeField] private float boostFactor;
         [SerializeField] private float boostDuration;
+        [SerializeField] private int _relatedPlayerID;
+        public int RelatedPlayerID { get => _relatedPlayerID; }
         private Node currentNode;
         private Direction currentDirection;
 
@@ -26,7 +28,7 @@ namespace CustomScripts.GameEntities
         }
 
         public bool IsImmnueToSpawner { get; set; }
-        private void Move()
+        public void Move()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
 	    
@@ -85,7 +87,7 @@ namespace CustomScripts.GameEntities
             }
         }
 
-        private void ReverseDirection()
+        public void ReverseDirection()
         {
             var lookVector = -transform.forward;
             var targetRotation = Quaternion.LookRotation(lookVector);

@@ -8,6 +8,7 @@ namespace CustomScripts.Managers
     public class UpdateManager : MonoBehaviour
     {
         public event Action GlobalUpdate;
+        public event Action GlobalFixedUpdate;
         public static UpdateManager Instance { get; private set; }
         private void Awake()
         {
@@ -23,6 +24,11 @@ namespace CustomScripts.Managers
         private void Update()
         {
             GlobalUpdate?.Invoke();
+        }
+
+        private void FixedUpdate()
+        {
+            GlobalFixedUpdate?.Invoke();
         }
     }
 }
