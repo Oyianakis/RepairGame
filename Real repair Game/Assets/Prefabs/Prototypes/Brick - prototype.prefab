@@ -109,4 +109,4 @@ MonoBehaviour:
   speed: 2.5
   boostFactor: 1.5
   boostDuration: 2
-  _relatedPlayerID: 2
+  _relatedPlayerID: 1
