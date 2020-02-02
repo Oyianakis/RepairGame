@@ -64,8 +64,8 @@ namespace CustomScripts.Environment
         }
     }
 
-    public enum Direction { None, Straight, Right, Back, Left }
-    public struct Node
+    public enum Direction { None, Right, Back, Left, Straight }
+    public class Node
     {
         public int xCoord { get; }
         public int yCoord { get; }

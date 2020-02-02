@@ -30,7 +30,6 @@ namespace CustomScripts.Environment
             }
             else
             {
-                Debug.Log("Already done!!");
                 this.transform.Rotate(0, 0, -90);
             }
         }
