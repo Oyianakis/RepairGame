@@ -128,12 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 606063183504523970, guid: fedb866c492a38a4abe8c4cc6c28680f,
-        type: 3}
-      propertyPath: data.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 43e5a5c20aa13c84cab326a143b12729,
-        type: 2}
     - target: {fileID: 606063183504523973, guid: fedb866c492a38a4abe8c4cc6c28680f,
         type: 3}
       propertyPath: m_LocalPosition.x

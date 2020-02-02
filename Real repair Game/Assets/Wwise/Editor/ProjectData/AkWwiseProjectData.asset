@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 17248ad42d720947b0b91f4c7e94cdc4
     GuidInternal: 
-    m_lastTime: -8586209765421721204
+    m_lastTime: -8586209695258378355
     List:
     - name: Main
       guid: 644752ad698d9f4092486f62ec0f767f
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 179f36ea6d9cd040b1fadbaa87737e40
     GuidInternal: 
-    m_lastTime: -8586209765595071019
+    m_lastTime: -8586209665601063620
     List:
     - name: Ambience
       guid: 140066065deac64b9f61928966f75baa
@@ -109,18 +109,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.562839
       minDuration: 0.541343
-    - name: UI_Cancel
-      guid: a50ae688b38ade4dbffaa917ff7764bc
-      id: 3083016892
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: UI_Cancel
-        ObjectType: 3
-      Path: Default Work Unit\UI_Cancel
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: UI_Navigation
       guid: ca5921d7bf69654fa0cd65a8d4e4bfca
       id: 860652252
@@ -131,8 +119,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI_Navigation
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.238583
+      minDuration: 0.238583
     - name: UI_Select
       guid: 9618e3b3927dfb48b393187500fcea3f
       id: 2774129122
@@ -143,8 +131,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI_Select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.500083
+      minDuration: 0.500083
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
