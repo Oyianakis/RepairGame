@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CustomScripts.Environment;
+using CustomScripts.Managers;
 
 namespace CustomScripts.GameEntities
 {
@@ -16,6 +17,8 @@ namespace CustomScripts.GameEntities
             StartCoroutine(this.Spawn());
             var spawnNode = Ground.Instance.FromWorldToNode(transform.position);
             Spawner.spawnNodes.Add(spawnNode);
+
+            GameManager.Instance.GameWon += delegate { OnGameWon_StopSpawning(); };
         }
 
         private void OnTriggerExit(Collider other)
@@ -32,6 +35,11 @@ namespace CustomScripts.GameEntities
             yield return new WaitForSeconds(spawnRate);
 
             StartCoroutine(Spawn());
+        }
+
+        public void OnGameWon_StopSpawning()
+        {
+            StopAllCoroutines();
         }
     }
 }
