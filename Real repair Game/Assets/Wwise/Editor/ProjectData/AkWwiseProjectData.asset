@@ -17,21 +17,21 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 63d2c610dc5a3147bc61c65e7b589f1e
     GuidInternal: 
-    m_lastTime: -8586210808226462583
+    m_lastTime: -8586210113371980154
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 11173df2751fc34ebe008da8c62d884b
     GuidInternal: 
-    m_lastTime: -8586210806900483768
+    m_lastTime: -8586210112648436062
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 17248ad42d720947b0b91f4c7e94cdc4
     GuidInternal: 
-    m_lastTime: -8586210660860158735
+    m_lastTime: -8586210113375441075
     List:
     - name: Main
       guid: 644752ad698d9f4092486f62ec0f767f
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 179f36ea6d9cd040b1fadbaa87737e40
     GuidInternal: 
-    m_lastTime: -8586210660860039313
+    m_lastTime: -8586209988117979254
     List:
     - name: Ambience
       guid: 140066065deac64b9f61928966f75baa
@@ -150,13 +150,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7267390f8913ed4fa8040bdd41a0f5e6
     GuidInternal: 
-    m_lastTime: -8586210808228297847
+    m_lastTime: -8586210113374493294
     List: []
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586211049638529358
+    m_lastTime: -8586210113374333757
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -180,7 +180,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586211049690500319
+    m_lastTime: -8586210113373146970
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -277,22 +277,54 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 3cc4585380b4b84ca6f35de88483ee8c
     GuidInternal: 
-    m_lastTime: -8586210808227115935
-    List: []
+    m_lastTime: -8586209991934936718
+    List:
+    - name: GameStatus
+      guid: 2cd7adac93eae64a92dcf80aa7206014
+      id: 1045871717
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameStatus
+        ObjectType: 9
+      Path: Default Work Unit\GameStatus
+      values:
+      - name: GamePlay
+        guid: 2db187807ff5c046ab7ea0e66c63d622
+        id: 89505537
+        PathAndIcons:
+        - ElementName: GamePlay
+          ObjectType: 8
+      - name: Menu
+        guid: 5160e34b45610b4e82b8b663a329cb71
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: cd75cdd674f9a6469688aba97e8b3ada
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d45a760b4ffbaf4993c8413f487ec5cd
     GuidInternal: 
-    m_lastTime: -8586210808228098419
+    m_lastTime: -8586210113375341335
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: dcc1d68ec123b448a2f24d817f9e0f64
     GuidInternal: 
-    m_lastTime: -8586210808227714341
+    m_lastTime: -8586210113371770718
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /GlobalGameJam2020
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
