@@ -326,5 +326,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GlobalGameJam2020
+  - /GlobalGameJam2020/States
+  - /GlobalGameJam2020/States/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
