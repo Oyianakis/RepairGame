@@ -1,6 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
 	3991942870	Music			\Default Work Unit\Music	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	1045871717	GameStatus			\Default Work Unit\GameStatus	
+
+State	ID	Name	State Group			Notes
+	0	None	GameStatus			
+	89505537	GamePlay	GameStatus			
+	2607556080	Menu	GameStatus			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1002716448	AA	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\AA_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\AA\AA		688546
+	4587218	01 BrickedBGM_Menu	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\01 BrickedBGM_Menu_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\GGJ2020 MUSIC\01 Menu\01 BrickedBGM_Menu\01 BrickedBGM_Menu		527345
+	15462718	Lawnmower_st_stp	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\Lawnmower_st_stp_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Industrial\Lawnmower_st_stp		188882
+	141367391	02 BrickedBGM_GamePlay	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\02 BrickedBGM_GamePlay_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\GGJ2020 MUSIC\02 Level\02 BrickedBGM_GamePlay\02 BrickedBGM_GamePlay		1941487
+	370696264	SnowPlowPassBy_S08IN_946	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\SnowPlowPassBy_S08IN.946_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Industrial\SnowPlowPassBy_S08IN_946		269758
+	414266263	RoomToneKitchen_S011AM_12	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\RoomToneKitchen_S011AM.12_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Industrial\RoomToneKitchen_S011AM_12		1028342
+	482116908	SFX,Hum,Wind Tone_M	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\SFX,Hum,Wind Tone.M_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Industrial\SFX,Hum,Wind Tone_M		202775
+	801279350	ChopSawRigid_S08IN_342	C:\Users\rh_mk\Desktop\GlobalGameJam2020\GlobalGameJam2020Wwise\.cache\Mac\SFX\ChopSawRigid_S08IN.342_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Industrial\ChopSawRigid_S08IN_342		85286
 
