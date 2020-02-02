@@ -80,7 +80,8 @@ namespace CustomScripts.Environment
         }
     }
 
-    public enum Direction { None, Right, Back, Left, forward }
+    public enum Direction { NONE, RIGHT, BACK, LEFT, FORWARD }
+    public enum TileType { NONE, EMPTY, TILE, OBSTACLE, OBJECTIVE } 
     public class Node
     {
         public int xCoord { get; }

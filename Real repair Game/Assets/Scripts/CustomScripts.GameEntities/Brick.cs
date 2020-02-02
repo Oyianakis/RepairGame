@@ -22,7 +22,7 @@ namespace CustomScripts.GameEntities
         private void Start()
         {
             UpdateManager.Instance.GlobalUpdate += this.Move;
-            this.currentDirection = Direction.forward;
+            this.currentDirection = Direction.FORWARD;
         }
 
         public bool IsImmnueToSpawner { get; set; }
@@ -50,7 +50,7 @@ namespace CustomScripts.GameEntities
 
             void DetectNodeAndAct()
             {
-                if (this.currentNode.TurnTo == Direction.None)
+                if (this.currentNode.TurnTo == Direction.NONE)
                     return;
 
                 var atCenterOfANode = CanReactToDirection();
@@ -85,16 +85,16 @@ namespace CustomScripts.GameEntities
         {
             switch (direction)
             {
-                case Direction.None:
+                case Direction.NONE:
                     throw new ArgumentException("opposite direction of None is non-existent");
-                case Direction.Right:
-                    return Direction.Left;
-                case Direction.Back:
-                    return Direction.forward;
-                case Direction.Left:
-                    return Direction.Right;
-                case Direction.forward:
-                    return Direction.Back;
+                case Direction.RIGHT:
+                    return Direction.LEFT;
+                case Direction.BACK:
+                    return Direction.FORWARD;
+                case Direction.LEFT:
+                    return Direction.RIGHT;
+                case Direction.FORWARD:
+                    return Direction.BACK;
                 default:
                     throw new ArgumentException();
             }
@@ -104,15 +104,15 @@ namespace CustomScripts.GameEntities
         {
             switch (direction)
             {
-                case Direction.None:
+                case Direction.NONE:
                     return Vector3.zero;
-                case Direction.forward:
-                    return Vector3.forward;
-                case Direction.Right:
+                case Direction.FORWARD:
+                    return Vector3.FORWARD;
+                case Direction.RIGHT:
                     return Vector3.right;
-                case Direction.Back:
+                case Direction.BACK:
                     return Vector3.back;
-                case Direction.Left:
+                case Direction.LEFT:
                     return Vector3.left;
                 default:
                     throw new ArgumentException("Direction has to be one of those listed in the enum definition");
