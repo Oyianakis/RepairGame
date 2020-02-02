@@ -120,9 +120,9 @@ namespace CustomScripts.Environment
             var dir = this.directionQueue.Dequeue();
             this.TurnTo = dir;
             this.directionQueue.Enqueue(dir);
-            //for test purpose
-            Debug.Log(this.TurnTo);
         }
+
+        public bool IsAssignedSign() => this.TurnTo != Direction.NONE;
     }
 
     public static class NodeExtensions

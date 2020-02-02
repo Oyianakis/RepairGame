@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Real repair Game/Assets/Wwise/Resources/Event/1F679B49-9E74-43B8-A33F-0F2D42C0B328.asset.meta
 guid: 890f35f37b096af4896bdf8d3ac473fa
 NativeFormatImporter:
+=======
+guid: bb1e89fe8f0d0440fa228243ed11a95b
+folderAsset: yes
+DefaultImporter:
+>>>>>>> acede7cb38561c401fdd39f62b538a51539b1eff:Real repair Game/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/DecodedBanks.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

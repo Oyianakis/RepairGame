@@ -10,6 +10,8 @@ namespace CustomScripts.Managers
 {
     public class GameManager : MonoBehaviour
     {
+        public event Action<int> GameWon;
+
         public static GameManager Instance{ get; private set;}
 
         private void Awake()
@@ -23,5 +25,9 @@ namespace CustomScripts.Managers
             Instance = this;
         }
 
+        public void OnGameWon(int playerID)
+        {
+            this.GameWon?.Invoke(playerID);
+        }
     }
 }
