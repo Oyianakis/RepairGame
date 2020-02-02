@@ -29,6 +29,7 @@ namespace CustomScripts.GameEntities
                 bricksReachedCount++;
                 this.CheckWinCondition();
                 UpdateManager.Instance.GlobalFixedUpdate -= brick.Move;
+                UIManager.Instance.UpdateScore(brick.RelatedPlayerID);
                 Destroy(brick.gameObject);
             }
         }

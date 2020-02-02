@@ -23,7 +23,7 @@ namespace CustomScripts.GameEntities
 
         private void Start()
         {
-            UpdateManager.Instance.GlobalUpdate += this.Move;
+            UpdateManager.Instance.GlobalFixedUpdate += this.Move;
             this.currentDirection = Direction.FORWARD;
         }
 

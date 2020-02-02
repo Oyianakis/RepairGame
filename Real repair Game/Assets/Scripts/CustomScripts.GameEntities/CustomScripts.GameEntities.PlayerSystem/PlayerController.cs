@@ -28,8 +28,9 @@ namespace CustomScripts.GameEntities.PlayerSystem
         [SerializeField] private float turnSpeed = 5f;
         private void MovePlayer()
         {
-            var horizontalVal = Input.GetAxisRaw($"Horizontal{this.player.playerID}");
-            var verticalVal = Input.GetAxisRaw($"Vertical{this.player.playerID}");
+            var horizontalVal = Mathf.Round(Input.GetAxisRaw($"Horizontal{this.player.playerID}"));
+            var verticalVal = Mathf.Round(Input.GetAxisRaw($"Vertical{this.player.playerID}"));
+            Debug.Log($"horizontal: {horizontalVal}\nvertical: {verticalVal}");
             var compositeMovement = (Vector3.right * horizontalVal + Vector3.forward * verticalVal) * Time.deltaTime * this.speed;
             this.player.Position += compositeMovement;
 
