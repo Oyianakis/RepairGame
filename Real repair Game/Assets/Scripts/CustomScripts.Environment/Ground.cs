@@ -62,9 +62,25 @@ namespace CustomScripts.Environment
             int y = (int)Mathf.Floor(vector2WorldPos.y);
             return grid[x, y];
         }
+
+        public bool ReachedDeadEnd(Node node)
+        {
+            var xLimit_left = 0;
+            var xLimit_right = this.mapSize.x - 1;
+            var yLimit_lower = 0;
+            var yLimit_upper = this.mapSize.y - 1;
+
+            var isDeadEnd =
+                node.xCoord == xLimit_left ||
+                node.xCoord == xLimit_right ||
+                node.yCoord == yLimit_lower ||
+                node.yCoord == yLimit_upper;
+
+            return isDeadEnd;
+        }
     }
 
-    public enum Direction { None, Right, Back, Left, Straight }
+    public enum Direction { None, Right, Back, Left, forward }
     public class Node
     {
         public int xCoord { get; }
@@ -96,6 +112,16 @@ namespace CustomScripts.Environment
             this.directionQueue.Enqueue(dir);
             //for test purpose
             Debug.Log(this.TurnTo);
+        }
+    }
+
+    public static class NodeExtensions
+    {
+        public static bool EqualTo(this Node @this, Node node)
+        {
+            var xSame = @this.xCoord == node.xCoord;
+            var ySame = @this.yCoord == node.yCoord;
+            return xSame && ySame;
         }
     }
 }
