@@ -91,7 +91,7 @@ namespace CustomScripts.Environment
         public Direction TurnTo { get; private set; }
         private Queue<Direction> directionQueue;
 
-        public Node(int xCoord, int yCoord, Tile tile, Direction turnDirection = Direction.None)
+        public Node(int xCoord, int yCoord, Tile tile, Direction turnDirection = Direction.NONE)
         {
             this.xCoord = xCoord;
             this.yCoord = yCoord;
@@ -101,7 +101,7 @@ namespace CustomScripts.Environment
             this.directionQueue = new Queue<Direction>();
             var directions = Enum.GetValues(typeof(Direction))
                 .OfType<Direction>()
-                .Where(d => d != Direction.None);
+                .Where(d => d != Direction.NONE);
             foreach (var dir in directions)
                 this.directionQueue.Enqueue(dir);
         }
