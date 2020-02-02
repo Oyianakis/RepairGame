@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,7 +107,7 @@ namespace CustomScripts.GameEntities
                 case Direction.NONE:
                     return Vector3.zero;
                 case Direction.FORWARD:
-                    return Vector3.FORWARD;
+                    return Vector3.forward;
                 case Direction.RIGHT:
                     return Vector3.right;
                 case Direction.BACK:
