@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomScripts.Environment;
 
 namespace CustomScripts.GameEntities
 {
     public class Spawner : MonoBehaviour
     {
+        public static List<Node> spawnNodes = new List<Node>();
         public Brick brickPrefab;
         [SerializeField] float spawnRate = 1f;
 
         private void Start()
         {
             StartCoroutine(this.Spawn());
+            var spawnNode = Ground.Instance.FromWorldToNode(transform.position);
+            Spawner.spawnNodes.Add(spawnNode);
         }
 
         public IEnumerator Spawn()
