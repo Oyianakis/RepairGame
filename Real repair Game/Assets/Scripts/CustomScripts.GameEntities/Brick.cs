@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,22 +22,33 @@ namespace CustomScripts.GameEntities
         private void Start()
         {
             UpdateManager.Instance.GlobalUpdate += this.Move;
-            this.currentDirection = Direction.Straight;
+            this.currentDirection = Direction.forward;
         }
 
         private void Move()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
+            this.currentNode = Ground.Instance.FromWorldToNode(transform.position);
+
+            if (CheckDeadEnd())
+                return;
             DetectNodeAndAct();
+
+            bool CheckDeadEnd()
+            {
+                var isAtCenter = CanReactToDirection();
+                var isDeadEnd = Ground.Instance.ReachedDeadEnd(this.currentNode);
+                var isSpawnNode = Spawner.spawnNodes.Contains(this.currentNode);
+
+                var checkDeadEndSucceed = isAtCenter && isDeadEnd && !isSpawnNode;
+                if (checkDeadEndSucceed)
+                    this.ReverseDirection();
+
+                return checkDeadEndSucceed;
+            }
 
             void DetectNodeAndAct()
             {
-                this.currentNode = Ground.Instance.FromWorldToNode(transform.position);
-		
-		// Is this a special node?
-		var specialNode = 
-
-		// If there's no direction, nothing to do.
                 if (this.currentNode.TurnTo == Direction.None)
                     return;
 
@@ -51,7 +62,6 @@ namespace CustomScripts.GameEntities
                     this.currentDirection = this.currentNode.TurnTo;
                 }
             }
-        
 
             bool CanReactToDirection()
             {
@@ -62,13 +72,40 @@ namespace CustomScripts.GameEntities
             }
         }
 
+        private void ReverseDirection()
+        {
+            var lookVector = -transform.forward;
+            var targetRotation = Quaternion.LookRotation(lookVector);
+            transform.rotation = targetRotation;
+            this.currentDirection = this.GetOppositeDireciton(this.currentDirection);
+        }
+
+        private Direction GetOppositeDireciton(Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.None:
+                    throw new ArgumentException("opposite direction of None is non-existent");
+                case Direction.Right:
+                    return Direction.Left;
+                case Direction.Back:
+                    return Direction.forward;
+                case Direction.Left:
+                    return Direction.Right;
+                case Direction.forward:
+                    return Direction.Back;
+                default:
+                    throw new ArgumentException();
+            }
+        }
+
         private Vector3 FromDirectionToVector3(Direction direction)
         {
             switch (direction)
             {
                 case Direction.None:
                     return Vector3.zero;
-                case Direction.Straight:
+                case Direction.forward:
                     return Vector3.forward;
                 case Direction.Right:
                     return Vector3.right;

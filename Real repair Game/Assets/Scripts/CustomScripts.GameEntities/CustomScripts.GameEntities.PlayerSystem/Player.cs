@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using CustomScripts.Environment;
+﻿using CustomScripts.Environment;
 using CustomScripts.Managers;
+using UnityEngine;
 
 namespace CustomScripts.GameEntities.PlayerSystem
 {
