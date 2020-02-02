@@ -18,6 +18,8 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID REPAIR_PLAYER1 = 3425495435U;
         static const AkUniqueID REPAIR_PLAYER2 = 3425495432U;
+        static const AkUniqueID UI_NAVIGATION = 860652252U;
+        static const AkUniqueID UI_SELECT = 2774129122U;
     } // namespace EVENTS
 
     namespace STATES
